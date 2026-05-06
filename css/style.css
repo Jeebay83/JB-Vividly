@@ -15,7 +15,11 @@
     --font-general: "Roboto", sans-serif;
     --font-h1: "Shrikhand", serif;
     --font-liens: "Inter", sans-serif;
-    
+}
+
+.m-width{
+    max-width: 990px;
+    margin: auto;
 }
 
 *{
@@ -43,7 +47,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+    padding: 20px 15px;
 }
 
 /* Main */
@@ -51,6 +55,7 @@ header{
 Main{
     #Find{
         background-color: var(--golden-orange);
+        padding: 15px;
         
         p{
             font-size: 15px;
@@ -63,7 +68,7 @@ Main{
             align-items: center;
             text-align: center;
             gap:10px;
-            padding: 20px 15px;
+            padding: 20px 0;
         }
         form{
             display: flex;
@@ -81,10 +86,9 @@ Main{
             }
             button{
                 background-color: var(--burnt-orange);
-                padding: 10px 20px;
+                padding: 10px 15px;
                 border-radius: 20px;
                 border:none;
-                width: 50%;
                 margin: auto;
                 p{
                     font-family: var(--font-liens);
@@ -125,5 +129,38 @@ Main{
             }
         }
         
+    }
+    #Chose{
+        background-color: var(--golden-orange);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 15px;
+        p{
+            font-size: 15px;
+            font-weight: 300;
+        }
+        img{
+            width: 100%;
+            border-radius: 12px 12px 0 0;
+            height: 140px;
+            object-fit: cover;
+        }
+        article{
+            background-color: var(--white);
+            border-radius: 12px;
+            width: 100%;
+            a{
+                padding: 10px 10px 0 10px;
+                display: block;
+            }
+            form{
+                padding: 10px;
+                p{
+                    border-top: 1.5px solid var(--golden-orange);
+                    padding-top: 10px;
+                }
+            }
+        }
     }
 }
