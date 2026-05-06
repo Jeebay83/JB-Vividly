@@ -162,5 +162,21 @@ Main{
                 }
             }
         }
+        .New{
+            position: relative;
+        }
+        .New::before{
+            content:"New !";
+            position: absolute;
+            background-color: var(--burnt-orange);
+            color:var(--white);
+            top:10px;
+            left:-12px;
+            padding: 2px 10px;
+            font-family: var(--font-h1);
+            transform: rotate(-45deg);
+
+        }
+        
     }
 }
