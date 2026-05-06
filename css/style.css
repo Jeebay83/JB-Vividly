@@ -1,0 +1,129 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* General */
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --golden-orange:#ffae00;
+    --burnt-orange:#ff7800;
+    --charcoal:#252525;
+    --font-general: "Roboto", sans-serif;
+    --font-h1: "Shrikhand", serif;
+    --font-liens: "Inter", sans-serif;
+    
+}
+
+*{
+    margin:0;
+    color:var(--black);
+    font-family:var(--font-general);
+    text-decoration: none;
+}
+
+h1{
+    font-family:var(--font-h1);
+    font-size: 30px;
+    font-weight: 400;
+}
+
+input{
+    font-family:var(--font-liens);
+    font-weight: 400;
+}
+
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+/* Main */
+
+Main{
+    #Find{
+        background-color: var(--golden-orange);
+        
+        p{
+            font-size: 15px;
+            font-weight: 300;
+        }
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap:10px;
+            padding: 20px 15px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+            width: 100%;
+            
+            
+            input{
+                padding: 7px;
+                border-radius: 12px;
+                background-color: var(--golden-orange);
+                border: none;
+                box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+            }
+            button{
+                background-color: var(--burnt-orange);
+                padding: 10px 20px;
+                border-radius: 20px;
+                border:none;
+                width: 50%;
+                margin: auto;
+                p{
+                    font-family: var(--font-liens);
+                    font-size: 12.26px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    #How{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0;
+            li{
+                counter-increment: item;
+                padding: 20px 0;
+                border-radius: 12px;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+                ::before{
+                    content:counter(item);
+                    background-color: var(--burnt-orange);
+                    color: var(--white);
+                    padding: 2px 7px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+                p{
+                    margin-left: -11px;
+                    font-weight: 500;
+                };
+            }
+        }
+        
+    }
+}
