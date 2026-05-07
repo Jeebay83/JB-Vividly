@@ -69,13 +69,15 @@ Main{
             text-align: center;
             gap:10px;
             padding: 20px 0;
+            div{
+                padding: 10px;
+            }
         }
         form{
             display: flex;
             flex-direction: column;
             gap:15px;
             width: 100%;
-            
             
             input{
                 padding: 7px;
@@ -90,7 +92,9 @@ Main{
                 border-radius: 20px;
                 border:none;
                 margin: auto;
-                p{
+                background:linear-gradient(to bottom, var(--burnt-orange), var(--golden-orange));
+                box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+                a{
                     font-family: var(--font-liens);
                     font-size: 12.26px;
                     font-weight: 500;
@@ -136,29 +140,61 @@ Main{
         flex-wrap: wrap;
         gap: 20px;
         padding: 15px;
+        >a{
+            background-color: var(--burnt-orange);
+            padding: 10px 15px;
+            border-radius: 20px;
+            border:none;
+            margin: auto;
+            font-size: 14px;
+            font-weight: 500;
+            background:linear-gradient(to bottom, var(--burnt-orange), var(--golden-orange));
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        }
         p{
             font-size: 15px;
             font-weight: 300;
         }
-        img{
+        div{
             width: 100%;
-            border-radius: 12px 12px 0 0;
-            height: 140px;
-            object-fit: cover;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         article{
             background-color: var(--white);
             border-radius: 12px;
             width: 100%;
+            >img{
+            width: 100%;
+            border-radius: 12px 12px 0 0;
+            height: 140px;
+            object-fit: cover;
+            }
             a{
-                padding: 10px 10px 0 10px;
+                padding: 10px;
                 display: block;
             }
             form{
                 padding: 10px;
-                p{
-                    border-top: 1.5px solid var(--golden-orange);
-                    padding-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-top: 1.5px solid var(--golden-orange);
+                input{
+                    display: none;
+                }
+                
+                .pouce-label{
+                background-image: url(../img/thumbs-up-regular.svg);
+                width: 20px;
+                height: 20px;
+                display: block;
+                cursor: pointer;
+                }
+                input[type=checkbox]:checked + .pouce-label,
+                input[type=checkbox]:hover + .pouce-label{
+                    background-image: url(../img/thumbs-up-solid.svg);
                 }
             }
         }
@@ -178,5 +214,51 @@ Main{
 
         }
         
+    }
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--charcoal);
+
+    h2{
+        font-family: var(--font-h1);
+        color:var(--white);
+        font-size: 24px;
+        font-weight: 400;
+        padding: 15px;
+    }
+    ul{
+        list-style: none;
+        padding: 0 15px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    a{
+        color:var(--white);
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+}
+
+@media screen and (min-width: 767px){
+    Main{
+        #Find{
+            div{
+                form{
+                    align-items: center;
+                    input{
+                        width:65%
+                    }
+                }
+                div{
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
     }
 }
