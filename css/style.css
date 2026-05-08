@@ -91,7 +91,10 @@ Main{
                 border: none;
                 box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
             }
-            button{
+            a{
+                font-family: var(--font-liens);
+                font-size: 12.26px;
+                font-weight: 500;
                 background-color: var(--burnt-orange);
                 padding: 10px 15px;
                 border-radius: 20px;
@@ -99,11 +102,6 @@ Main{
                 margin: auto;
                 background:linear-gradient(to bottom, var(--burnt-orange), var(--golden-orange));
                 box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-                a{
-                    font-family: var(--font-liens);
-                    font-size: 12.26px;
-                    font-weight: 500;
-                }
             }
         }
     }
@@ -355,11 +353,13 @@ footer{
         }
         form{
             padding-bottom: 10px;
+            font-family: var(--font-liens);
             .firstdivinput{
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
                 padding:20px 0;
+                font-family: var(--font-liens);
                 input{
                     padding: 7px;
                     border: 2px solid var(--golden-orange);
@@ -375,6 +375,9 @@ footer{
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
+                label{
+                    font-family: var(--font-liens);
+                }
                 button{
                     border-radius: 20px;
                     background:linear-gradient(to bottom, var(--burnt-orange), var(--golden-orange));
@@ -383,6 +386,7 @@ footer{
                     width: 80px;
                     height: 30px;
                     cursor: pointer;
+                    font-family: var(--font-liens);
                 }
             }
 
